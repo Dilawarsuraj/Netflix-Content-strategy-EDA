@@ -478,13 +478,24 @@ jupyter notebook DAV1_Project.ipynb
 
 
 🔗 LinkedIn: https://www.linkedin.com/in/dilawarsuraj/
-💻 GitHub: 
+💻 GitHub: https://github.com/Dilawarsuraj?tab=repositories
 📧 Email: dilawarsuraj2@gmail.com
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+ DataSet Link: https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/000/940/original/netflix.csv
+ 
+ Solution Link: https://colab.research.google.com/drive/1Mhy2abu-Z_1G_ddFkKPlxQQ0jT9DVQXY#scrollTo=WZT3WHmnNorY
+ How to Download DataSet: *After clicking on the above link, you can download the files by right-clicking on the page and clicking on "Save As", then naming the file as per your wish, with .csv as the extension*
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+  Note: **If you found this project useful or interesting, consider giving it a star on GitHub!**
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                
+                                                                Happy Learning : )
+                                    
+ 
 
 
 

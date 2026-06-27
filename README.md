@@ -306,6 +306,187 @@ C) **Country vs Content Type (Top 5 Countries)**
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+**Step 5 — Missing Value & Outlier Check**
+
+Missing Value Summary (post-preprocessing):
+
+| Column                                 | Missing | %     |
+|----------------------------------------|--------:|------:|
+| date_added / year_added / month_added | 98      | 1.11% |
+| rating                                 | 4       | 0.05% |
+| duration                               | 3       | 0.03% |
+| All others                             | 0       | 0%    |
+
+Note: `director`, `cast`, and `country` missing values were filled with `'Unknown'` during preprocessing.
+
+**Outlier Detection**:
+
+***Release Year Boxplot***:
+
+
+1. No significant outliers
+2. A few very old titles (pre-1940s) appear as mild outliers on the lower end
+3. These are valid classic films, not data errors — retained
+
+
+***Movie Duration Boxplot***:
+
+
+1. Clear outliers above ~250 minutes
+2. These represent documentaries, director's cut versions, or special feature-length productions
+3. All retained as they are legitimate content
+
+
+**Decision**: No outlier treatment was applied. All values represent real content with valid business context.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**Step 6 — Insights Based on Non-Graphical & Visual Analysis**
+
+***6.1 Range of Attributes***
+
+
+1. Release years span 1925 to 2021 — Netflix has both classic films and brand new content
+2. Movie durations range from under 60 minutes to over 300 minutes
+3. TV Shows range from 1 season to 10+ seasons
+4. 748 unique countries of production — truly a global platform
+
+
+***6.2 Distribution of Variables & Relationships***
+
+
+1. Content distribution is heavily skewed toward Movies (70% vs 30% TV Shows)
+2. However, TV Shows are growing faster year-on-year since 2016 — a clear strategic shift
+3. Content production is concentrated in a few countries — USA, India, and UK account for the majority
+4. Genre distribution shows Drama, Comedy, and International content dominate across both content types
+
+**6.3 Plot-by-Plot Comments**
+
+| Plot                     | Observation |
+|--------------------------|-------------|
+| Release Year Histogram   | Sharp growth after 2015; Netflix's global push drove massive content addition |
+| Movie Duration Histogram | 80–120 minutes is the sweet spot; audiences prefer standard feature length |
+| Release Year Countplot   | 2017–2019 are peak years; post-2020 content dipped slightly (likely COVID impact) |
+| Top 10 Countries Countplot | USA dominates; India is a fast-growing second market |
+| Top 10 Actors Countplot  | Indian actors dominate; Japan also has strong representation |
+| Movie Duration Boxplot   | Tight IQR around 90–100 min; outliers are valid long-form content |
+| Content Over Years (hue) | TV Shows rising steeply from 2016; Movies still dominant but the gap is closing |
+| Country vs Type          | USA and India are movie-heavy; UK has more TV Show balance |
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Step 7 — Business Insights**
+
+
+***These are patterns observed in the data along with what can be inferred from them.***
+
+
+
+1. **Movies dominate, but TV Shows are the growth driver**
+
+Movies make up 70% of Netflix's library, but TV Shows have grown much faster since 2016. TV Shows drive higher subscriber retention because viewers return episode after episode, and season after season. This trend suggests Netflix is already aware of this and is investing more in series.
+
+2. **Netflix's content library exploded after 2015**
+
+The number of titles added per year grew dramatically from 2015 onwards, peaking around 2017–2019. This coincides with Netflix's global expansion and its shift from a licensing model to producing original content. Netflix clearly scaled content to win international markets.
+
+3. **The United States is the backbone — India is the growth engine**
+
+The US contributes nearly 3x more content than any other country. But India is a strong second with 972 titles — this signals Netflix's heavy bet on the South Asian market. South Korea's presence is also growing rapidly, driven by the global popularity of K-dramas.
+
+4. **Drama, Comedy, and International content are Netflix's bread and butter**
+
+These genres dominate both movies and TV shows consistently. International Movies and Dramas appear most frequently. This tells us that emotionally relatable, story-driven content performs across cultures.
+
+5. **Netflix is built for mature and teen audiences**
+TV-MA (3,207 titles) and TV-14 (2,160 titles) together make up over 60% of all content. Children and family content exists but is a smaller share. Netflix's identity is bold, mature storytelling.
+
+6. **Netflix prefers short-run TV series**
+
+Most TV Shows on Netflix have 1–3 seasons. This is a deliberate strategy — launch a limited series, test audience response, then decide whether to renew. It reduces production risk while experimenting with diverse content.
+
+7. **A small set of trusted creators appear repeatedly**
+   
+A few directors and actors show up across multiple titles (e.g., Rajiv Chilaka directed 19 titles, David Attenborough appeared in 19 productions). Netflix clearly builds long-term creative partnerships to ensure consistent quality and reduce risk.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Step 8 — Recommendations**
+
+***Simple, data-backed, actionable items for business executives. No technical jargon.***
+
+
+
+1. **Invest more in TV Shows — especially limited series**
+
+TV Shows create long-term viewer habits. A subscriber who is watching a 3-season drama is far less likely to cancel than someone who finishes a 2-hour movie. Netflix should increase its TV Show production, particularly limited series (1–3 seasons) that allow testing before renewal.
+
+2. **Double down on India, South Korea, and Japan**
+   
+These three markets show strong and growing content presence. Netflix should invest in local-language original productions — with native writers, directors, and actors — to attract and retain subscribers in these high-growth regions. Indian films and K-dramas already have proven global crossover appeal.
+
+3. **Focus content investment on Drama, Comedy, and International genres**
+
+The data clearly shows these genres dominate. Netflix should continue developing content in these areas while experimenting within them — for example, crime dramas, romantic comedies, and documentary series — to stay relevant across demographics.
+
+4. **Maintain focus on mature audiences, while slowly expanding family content**
+   
+TV-MA and TV-14 ratings make up the majority of the library. Netflix's core identity is bold, adult storytelling. However, gradually adding more family-friendly and children's content would help grow the subscriber base to include household accounts and parents.
+
+5. **Time new content releases strategically**
+
+Analysis of `date_added` shows certain months have higher content addition rates. Netflix should align major original releases with peak streaming periods to maximize viewership and buzz.
+
+6. **Lock in successful creators with exclusive, long-term deals**
+
+Directors and actors who appear repeatedly across Netflix titles are proven assets. Signing them to exclusive deals ensures a consistent content pipeline, reduces casting uncertainty, and builds audience loyalty to familiar faces and storytelling styles.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+▶️ **How to Run This Project**
+
+**Option 1 — Open in Google Colab (Recommended — No Setup Needed)**
+
+**Collab Link**: https://colab.research.google.com/drive/1Mhy2abu-Z_1G_ddFkKPlxQQ0jT9DVQXY
+
+(*Just click the above Link. The notebook will open in your browser. Click Runtime → Run All to execute everything*).
+
+**Option 2 — Run Locally on Your Machine**
+
+Step 1: Clone this repository
+git clone https://github.com/YOUR-USERNAME/netflix-content-strategy-eda.git
+cd netflix-content-strategy-eda
+
+Step 2: Install required Python libraries
+pip install pandas numpy matplotlib seaborn
+
+Step 3: Download the dataset
+Visit the link below, right-click → Save As → save as netflix.csv
+https://colab.research.google.com/drive/1Mhy2abu-Z_1G_ddFkKPlxQQ0jT9DVQXY
+
+Step 4: Launch Jupyter Notebook
+jupyter notebook DAV1_Project.ipynb
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+👤 Author
+
+**Dilawar Suraj Shaik**
+
+**Data Analyst** | Python | EDA | Business Insights
+
+
+🔗 LinkedIn: https://www.linkedin.com/in/dilawarsuraj/
+💻 GitHub: 
+📧 Email: dilawarsuraj2@gmail.com
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 
 

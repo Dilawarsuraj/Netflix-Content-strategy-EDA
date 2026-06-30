@@ -455,7 +455,7 @@ Directors and actors who appear repeatedly across Netflix titles are proven asse
 **Option 2 — Run Locally on Your Machine**
 
 Step 1: Clone this repository
-git clone https://github.com/YOUR-USERNAME/netflix-content-strategy-eda.git
+https://github.com/Dilawarsuraj/Netflix-Content-strategy-EDA
 cd netflix-content-strategy-eda
 
 Step 2: Install required Python libraries
